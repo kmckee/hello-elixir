@@ -14,8 +14,4 @@ defmodule BasicMath do
   def divide(dividend, divisor) do
     dividend / divisor
   end
-
-  def travelTime(speedMph, distanceMiles) do
-    distanceMiles / speedMph
-  end
 end

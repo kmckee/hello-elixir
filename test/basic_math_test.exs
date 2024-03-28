@@ -17,10 +17,4 @@ defmodule BasicMathTest do
   test "divide 10 by 2" do
     assert BasicMath.divide(10, 2) == 5
   end
-
-  test "calculate time to travel a distance" do
-    speedMph = 60
-    distanceMiles = 90
-    assert BasicMath.travelTime(speedMph, distanceMiles) == 1.5
-  end
 end
