@@ -41,4 +41,24 @@ defmodule LinkedListTest do
     assert second == 2
     assert rest == [3, 4, 5, 6]
   end
+
+  test "append a list more performantly" do
+    list = [1, 2, 3]
+    reversed = Enum.reverse(list)
+    appended = [4 | reversed]
+    result = Enum.reverse(appended)
+    assert result == [1, 2, 3, 4]
+  end
+
+  test "append a list more performantly refactored with pipe" do
+    list = [1, 2, 3]
+    result = list |> Enum.reverse() |> (fn reversed -> [4 | reversed] end).() |> Enum.reverse()
+    assert result == [1, 2, 3, 4]
+  end
+
+  test "kernel allows length to be checked" do
+    list = [1, 2, 3]
+    assert length(list) == 3
+    assert Enum.count(list) == 3
+  end
 end
