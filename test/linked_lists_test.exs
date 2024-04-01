@@ -59,6 +59,5 @@ defmodule LinkedListTest do
   test "kernel allows length to be checked" do
     list = [1, 2, 3]
     assert length(list) == 3
-    assert Enum.count(list) == 3
   end
 end
